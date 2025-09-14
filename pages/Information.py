@@ -6,7 +6,6 @@ import random
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 from PIL import Image
-import altair as alt
 
 df = pd.read_csv("speech_pathology_dataset1.csv")
 df['Visit_Type'] = df['Visit Type'].replace('visit', 'Assistive technology evaluation')
@@ -23,7 +22,7 @@ df['Year'] = [random.randint(2015, 2025) for _ in range(len(df))]
 
 st.title(":blue[LOGOPEDDATA Sverige]")
 st.markdown('''
-    :blue-background[_Swedish Speech and Language Pathology data for the period 2015-2025_]''')
+    :blue-background[_Swedish Speech and Language Pathology data for the years 2015-2025_]''')
 
 image = Image.open('logopedbild.jpg') 
 
@@ -31,22 +30,3 @@ st.sidebar.image(image, use_container_width=True)
 
 st.snow()
 
-
-with st.container():
-    st.write("This is inside the container")
-# Gruppsummering: antalet distance visits per month + visit type
-summary_df = df.groupby(['Year', 'Visit Type']).agg({'Distance': 'sum'}).reset_index()
-
-# Byt namn på kolumnerna för plotten
-summary_df = summary_df.rename(columns={
-    'Year': 'col1',
-    'Distance': 'col2',
-    'Visit Type': 'col3'
-})
-chart = alt.Chart(summary_df).mark_line(point=True).encode(
-    x='col1:N',        # Month
-    y='col2:Q',        # Antal distance = YES
-    color='col3:N'     # Visit Type
-).properties(title='Distance Visits per Month by Visit Type')
-
-st.altair_chart(chart, use_container_width=True)
