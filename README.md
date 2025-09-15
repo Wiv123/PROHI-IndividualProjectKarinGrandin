@@ -1,3 +1,18 @@
+#**About this dashboard**
+
+This dashboard is based on a synthetic speech and language pathology dataset with data including Name of patients, Age, Type of visit, Patient Category, whether the visit was conducted remotely or not, which area of Sweden the patient was from and which is the patients forst language. I have added Months and Years, to get a temporal feature in the chart.
+
+I have made a dashboard where there is a chart describing changes over time regarding the remote consultation rate. In this example, I suggest Kista as the are described, since the number of visits over the time period are quite few for a whole nation.
+
+You can also view a (fictional) table describing the SLP's that work in the clinic of choice, their area of expertise as well as their rating from their most recent patient visit and an overview of their own dairy estimation of their stress level. 
+
+In the bottom of the page you can get liks to 1177, for booking of appointments and there is also a link to an information page about Speech and Language Pathology
+
+In the sidebar there are widgets with updates on the most proficient SLP in Sweden, their production rate, and current salary trends, as well as information of the current topic in the National Speech Pathology Magazine
+
+Page 2 includes information about my previous project on Pokémon stats #
+
+
 # PROHI Dashboard Example
 
 **Author**: [Karin Grandin]
@@ -44,7 +59,6 @@ First, make sure that you are running Python from the environment. Check the ste
 ```
 
 ### Dependencies
-
 Tested on Python 3.12.7 with the following packages:
   - Jupyter v1.1.1
   - Streamlit v1.46.1
@@ -54,5 +68,4 @@ Tested on Python 3.12.7 with the following packages:
   - shap v0.48.0
 
 ## Contributors
-
-_Add the project's authors, contact information, and links to websites or portfolios._
+*Karin Grandin*. Project website: https://github.com/Wiv123/PROHI-IndividualProjectKarinGrandin.git
