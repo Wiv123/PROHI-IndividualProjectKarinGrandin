@@ -24,7 +24,7 @@ df['Month of visit'] = [random.choice(months) for _ in range(len(df))]
 df['Year'] = [random.randint(2015, 2025) for _ in range(len(df))]
 
 df['Year'] = df['Year'].astype('string')
-image = Image.open('log') 
+image = Image.open('log.png') 
 
 left, right = st.columns([0.3, 0.9])
 
@@ -38,7 +38,7 @@ with right:
         :blue-background[_Swedish Speech and Language Pathology data for the period 2015-2025_]''')
     st.markdown("<br>", unsafe_allow_html=True)
 
-image2 = Image.open('kista.jpg') 
+image2 = Image.open('kista.png') 
 st.sidebar.image(image2, use_container_width=True)
 st.sidebar.metric("SLP of the week", "Elisabet", "+ 0.7 patients/day")
 st.sidebar.metric("Average salary", "32 000 SEK", "-8% since last year")
